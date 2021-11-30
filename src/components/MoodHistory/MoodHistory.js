@@ -1,4 +1,5 @@
 import React from "react";
+import Mood from "../Mood/Mood";
 import Cat from "../../images/image.png";
 import "./moodHistory.css";
 
@@ -20,8 +21,7 @@ const  MoodHistory = () => {
             </p>
           </div>
         ) : (
-          <h5>See out</h5>
-          //   <Mood key={todos.id} todo={todos} />
+             <Mood />
         )}
       </div>
     </div>
