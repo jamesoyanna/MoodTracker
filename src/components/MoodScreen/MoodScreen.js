@@ -6,6 +6,8 @@ import { addMood } from "../../redux/moodSlice";
 import Cat from "../../images/image.png";
 import "./moodScreen.css";
 
+
+
 const MoodScreen = () => {
  const [value, setValue] = useState("");  
 
@@ -19,6 +21,19 @@ const MoodScreen = () => {
  };
 
 
+  const handleHappyMood = () => {
+    setValue("😃");
+  }
+
+  const handleSadMood = () => {
+    setValue("😖");
+  };
+
+
+   const handleFunnyMood = () => {
+     setValue("😐");
+   };
+
   return (
     <div className="mood__screen">
       <div>
@@ -28,20 +43,18 @@ const MoodScreen = () => {
           <br /> current mood ?
         </p>
       </div>
-      {/* <ul
-        className="emoji__list"
-        onChange={(event) => setValue(event.target.value)}
-      >
-        <li className="emoji">😃</li>
-        <li className="emoji">😐</li>
-        <li className="emoji">😖</li>
-      </ul> */}
 
-      <select value={value} onChange={(event) => setValue(event.target.value)}>
-        <option>😖</option>
-        <option>😐</option>
-        <option>😃</option>
-      </select>
+      <ul className="emoji__list">
+        <li onClick={handleHappyMood} value={value} className="emoji">
+          😃
+        </li>
+        <li onClick={handleFunnyMood} value={value} className="emoji">
+          😐
+        </li>
+        <li onClick={handleSadMood} value={value} className="emoji">
+          😖
+        </li>
+      </ul>
 
       <p className="screen__text">Cat is super excited ! </p>
       <div className="center">

@@ -6,7 +6,7 @@ import Cat from "../../images/image.png";
 import "./moodHistory.css";
 
 const  MoodHistory = () => {
- const [isMood, setIsMood] = useState(true);
+ const [isMood, setIsMood] = useState(false);
 
   const moods = useSelector((state) => state.moods);
     
