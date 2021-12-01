@@ -7,12 +7,10 @@ import Cat from "../../images/image.png";
 import "./moodScreen.css";
 
 
-
 const MoodScreen = () => {
  const [value, setValue] = useState("");  
 
  const dispatch = useDispatch();
-
 
  const HandleSaveMood = () => {
    dispatch(addMood({ title: value }));
