@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useSelector } from "react-redux";
 
 import Mood from "../Mood/Mood";
@@ -6,10 +6,12 @@ import Cat from "../../images/image.png";
 import "./moodHistory.css";
 
 const  MoodHistory = () => {
- 
-  const moods = useSelector((state) => state.moods);
+ const [isMood, setIsMood] = useState(true);
 
- // const mooder = false;
+  const moods = useSelector((state) => state.moods);
+    
+   //setIsMood(moods)
+    
   return (
     <div className="moodhistory__container">
       <div>
@@ -19,7 +21,7 @@ const  MoodHistory = () => {
         </div>
 
         <p className="mood__text">mood history</p>
-        { !moods ? (
+        {isMood ? (
           <div className="mood__card">
             <p className="mood__card__text">
               No mood history <br /> to show yet yet
