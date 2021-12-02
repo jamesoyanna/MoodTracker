@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+# React Calendar App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Mood Tracker that enables users to change the various mood of a cat. This application is fully built with React JS.
 
-## Available Scripts
+## Application Features
+-Mood Screen - Displays the list of moods.
+-Mood History - Display the moods of the cat on button click.
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ ### How I will improve more on this application:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##### - If giving more time and incentives for this project, I would want to implement other functionality of the application.
 
-### `yarn test`
+##### - I am currently refactoring the application where necessary.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### The application is also fully deploy and hosted on Netlify. Live view of the application Demo can be found here- [React Calendar App]()
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Pictutial View of the Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To select a mood emoji by clicking on any of the emojis.
+![Initial state](https://user-images.githubusercontent.com/26815113/144429819-c08065d3-7c9c-4b52-bcfc-1edddf1c2b9c.JPG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+Click on the save modd button to create a mood for the cat.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![second mood](https://user-images.githubusercontent.com/26815113/144430594-3a12d7d8-bdb1-49e4-935a-753e579b0216.JPG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Display each mood for the cat
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![mood Display](https://user-images.githubusercontent.com/26815113/144431058-32d6d996-2d48-4d1e-8a9c-46ba916fa378.JPG)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How to use the application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Table of Contents
+- [Getting Started](#getting-started)
+	- [Tools Required](#tools-required)
+	- [Installation](#installation)
+- [Development](#development)
+- [Running the App](#running-the-app)
+- [Deployment](#deployment)
+- [Authors](#authors)
+- [License](#license)
 
-### Code Splitting
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The project has two branches: `master`, `dev`.
 
-### Analyzing the Bundle Size
+* `master` The master branch contains the full source code on the solution I have developed for excercise.
+* `dev` The dev branch contains code under development. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ ## Project Folder structure.
 
-### Making a Progressive Web App
+```
+	mood-tracker-app
+	├── README.md
+	├── package.json
+	├── .gitignore
+	├── public
+	│   ├── favicon.ico
+	│   ├── index.html
+	│   └── manifest.json
+	└── src
+	      └── components
+		     ├── Mood
+			      ├── Mood.js
+				  ├── Mood.css
+			 ├── MoodHistory
+			       ├── MoodHistory.js
+                    ├── MoodHistory.css
+			 ├── MoodScreen
+			       ├── MoodScreen.js
+				   ├── MoodScreen.css
+			 ├── Card
+			 ├── Container
+			
+	      └── Redux
+	              └── moodSlice.js
+		                
+				  ├── store.js
+		  └── Images
+		  └── App.js
+		  └── App.css
+		  └── index.css
+		  └── index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
 
-### Advanced Configuration
+### Tools Required
+The following tools is required to develop and run this application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* A text editor like Visual Studio Code
+* Command Line
 
-### Deployment
+### Installation
+Installation steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+##Node.js and Yarn or Npm
+Your computer must have installed nodejs, and yarn to run this application You can download Node.js from https://nodejs.org and yarn from https://yarnpkg.com/lang/en/docs/install/ . NPM comes bundled with Node.js
+![nodejs](https://user-images.githubusercontent.com/26815113/132867561-bf2ec1a2-cd63-461f-95dd-e95c1c6676c7.PNG)
 
-### `yarn build` fails to minify
+## Install Npm Packages
+You must have to install packages. You can do this by running yarn or npm install from the root of the project to install all the necessary dependencies.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Development server
+
+
+#### Running the App
+
+  ``` 
+Run yarn start or npm stall from the root of your project to start a dev server. 
+Navigate to http://localhost:3000/. 
+The app will automatically reload if you change any of the source files.
+  ```
+
+## Deployment
+
+You can deploy the application on any server. You can make use of Netlify,a git-based workflow and powerful serverless platform to build, deploy, and collaborate on web apps. Visit [Netlify](https://www.netlify.com/)
+
+
+## Author
+
+#### James Oyanna
+* [GitHub](https://github.com/jamesoyanna)
+* [LinkedIn](https://www.linkedin.com/in/jamesoyanna)
+
+
+`Mood Tracker App` is open source software
+
+## Resources
+
+I made use of these `resources` during development.
+
+* [New React Js Doc](https://beta.reactjs.org/)
+* [casscading Style Sheet (CSS)
+* [Redux](https://redux.js.org/)
+*

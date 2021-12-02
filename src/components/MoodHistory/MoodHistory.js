@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import Mood from "../Mood/Mood";
 import Cat from "../../images/image.png";
@@ -6,8 +6,8 @@ import "./moodHistory.css";
 
 
 const MoodHistory = () => {
-  const [isMood, setIsMood] = useState(true);
-
+  //const [isMood, setIsMood] = useState(true);
+  const isMood = true;
   const moods = useSelector((state) => state.moods);
 
     //  const toggleMood = () => {
@@ -25,13 +25,6 @@ const MoodHistory = () => {
         </div>
         <p className="mood__text">mood history</p>
 
-        {isMood && (
-          <div className="mood__card">
-            <p className="mood__card__text">
-              No mood history <br /> to show yet yet
-            </p>
-          </div>
-        )}
         {moods && (
           <ul>
             {moods.map((mood) => (
@@ -43,6 +36,13 @@ const MoodHistory = () => {
               />
             ))}
           </ul>
+        )}
+        {isMood && (
+          <div className="mood__card">
+            <p className="mood__card__text">
+              No mood history <br /> to show yet yet
+            </p>
+          </div>
         )}
       </div>
     </div>
