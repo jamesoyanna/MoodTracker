@@ -18,7 +18,7 @@ const MoodHistory = () => {
 
   return (
     <div className="moodhistory__container">
-      <div>
+    
         <div className="header">
           <img src={Cat} alt="cat" />
           <h4 className="title">Cat mood tracker™</h4>
@@ -44,7 +44,7 @@ const MoodHistory = () => {
             </p>
           </div>
         )}
-      </div>
+     
     </div>
   );
 };
