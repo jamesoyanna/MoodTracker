@@ -1,17 +1,16 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import Mood from "../Mood/Mood";
 import Cat from "../../images/image.png";
 import "./moodHistory.css";
 
-const  MoodHistory = () => {
- const [isMood, setIsMood] = useState(false);
+const MoodHistory = (props) => {
+  const [isMood, setIsMood] = useState(false);
 
   const moods = useSelector((state) => state.moods);
-    
-   //setIsMood(moods)
-    
+
   return (
     <div className="moodhistory__container">
       <div>
@@ -30,13 +29,18 @@ const  MoodHistory = () => {
         ) : (
           <ul>
             {moods.map((mood) => (
-              <Mood id={moods.id} title={mood.title} message={mood.message} />
+              <Mood
+                key={mood.id}
+                id={moods.id}
+                title={mood.emoji}
+                message={mood.message}
+              />
             ))}
           </ul>
         )}
       </div>
     </div>
   );
-}
+};
 
 export default MoodHistory;

@@ -1,41 +1,51 @@
 import React, {useState} from "react";
- 
+ import {useSelector} from 'react-redux'
 import { useDispatch } from "react-redux";
-import { addMood } from "../../redux/moodSlice";
+import { addMood, selectMood } from "../../redux/moodSlice";
 
 import Cat from "../../images/image.png";
 import "./moodScreen.css";
 
 
-const MoodScreen = () => {
- const [value, setValue] = useState("");  
+const MoodScreen = (props) => {
+ const [value, setValue] = useState(""); 
+ const [moodMessage, setMoodMessage] = useState("")
+
+
+ const [isToggle, setIsTogggle] = useState(true);  
 
  const dispatch = useDispatch();
 
  const HandleSaveMood = () => {
-   dispatch(addMood({ title: value }));
+   dispatch(addMood({ emoji: value, message: moodMessage }));
+   //dispatch(toogleMood());
    console.log(value);
    setValue("");
+  //  setIsTogggle(true)
+ 
  };
 
 
   const handleHappyMood = () => {
     setValue("😃");
+    setMoodMessage("Cat was super excited!")
   }
 
   const handleSadMood = () => {
+     setMoodMessage("Cat wasn't having it");
     setValue("😖");
   };
 
 
-   const handleFunnyMood = () => {
+   const handleFunnyMood = (id) => {
+       setMoodMessage("Cat was indifferent");
      setValue("😐");
    };
 
   return (
     <div className="mood__screen">
       <div>
-        <img src={Cat} alt="lol" />
+        <img src={Cat} alt="cat" />
         <p>
           What's your cat's
           <br /> current mood ?
@@ -54,7 +64,7 @@ const MoodScreen = () => {
         </li>
       </ul>
 
-      <p className="screen__text">Cat is super excited ! </p>
+      <p className="screen__text">{props.message} </p>
       <div className="center">
         <button onClick={HandleSaveMood} className="btn">
           Save mood
