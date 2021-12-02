@@ -6,16 +6,14 @@ import Cat from "../../images/image.png";
 import "./moodScreen.css";
 
 
-const MoodScreen = (props) => {
+const MoodScreen = () => {
  const [value, setValue] = useState(""); 
  const [moodMessage, setMoodMessage] = useState("")
-
 
  const dispatch = useDispatch();
 
  const HandleSaveMood = () => {
    dispatch(addMood({ emoji: value, message: moodMessage }));
-   console.log(value);
    setValue(""); 
  };
 
@@ -31,7 +29,7 @@ const MoodScreen = (props) => {
   };
 
 
-   const handleFunnyMood = (id) => {
+   const handleFunnyMood = () => {
        setMoodMessage("Cat was indifferent");
      setValue("😐");
    };
@@ -58,8 +56,20 @@ const MoodScreen = (props) => {
           😃
         </li>
       </ul>
+      {moodMessage === "Cat was super excited!" && (
+        <p style={{ color: "#1D9A39" }} className="screen__text">
+          {moodMessage}
+        </p>
+      )}
+      {moodMessage === "Cat wasn't having it" && (
+        <p style={{ color: "red" }}>{moodMessage} </p>
+      )}
+      {moodMessage === "Cat was indifferent" && (
+        <p style={{ color: "#FF9635" }} className="screen__text">
+          {moodMessage}
+        </p>
+      )}
 
-      <p className="screen__text">{props.message} </p>
       <div className="center">
         <button onClick={HandleSaveMood} className="btn">
           Save mood

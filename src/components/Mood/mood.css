@@ -2,7 +2,7 @@
 
 .happy__mood{
     padding: 10px 10px;
-    border: 1px solid  #00b386 ;
+    border: 1px solid  #1D9A39 ;
     width: 300px;
     height: 50px;
     margin-left: 10px;
@@ -10,11 +10,11 @@
     background: #F3F4F6B2;
     margin-top: 8px;
     justify-content: center;
-    color: #00b386;
+    color: #1D9A39;
 }
 
 .happy__mood__content{
-color:#00b386;
+color:#1D9A39;
 text-align: left;
 background-image: url("../../images/image4.png");
 background-repeat: no-repeat;
@@ -68,7 +68,7 @@ background: #F931311A 10%;
 
 .indifferent__mood{
    padding: 10px 10px;
-    border: 1px solid#FFA500 ;
+    border: 1px solid #FF9635 ;
     width: 300px;
     height: 50px;
     margin-left: 10px;
@@ -79,7 +79,7 @@ background: #F931311A 10%;
     color: #00b386;  
 }
 .indifferent__mood__content{
-color:	#FFA500;
+color:	#FF9635;
 text-align: left;
 background-image: url("../../images/image4.png");
 background-repeat: no-repeat;

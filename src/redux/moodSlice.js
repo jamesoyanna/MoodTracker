@@ -19,6 +19,5 @@ const moodSlice = createSlice({
   },
 });
 
-export const { addMood, toogleMood } = moodSlice.actions;
-export const selectMood = state => state.moods
+export const { addMood } = moodSlice.actions;
 export default moodSlice.reducer;
