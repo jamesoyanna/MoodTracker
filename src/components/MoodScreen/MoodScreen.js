@@ -1,7 +1,6 @@
 import React, {useState} from "react";
- import {useSelector} from 'react-redux'
 import { useDispatch } from "react-redux";
-import { addMood, selectMood } from "../../redux/moodSlice";
+import { addMood} from "../../redux/moodSlice";
 
 import Cat from "../../images/image.png";
 import "./moodScreen.css";
@@ -12,17 +11,12 @@ const MoodScreen = (props) => {
  const [moodMessage, setMoodMessage] = useState("")
 
 
- const [isToggle, setIsTogggle] = useState(true);  
-
  const dispatch = useDispatch();
 
  const HandleSaveMood = () => {
    dispatch(addMood({ emoji: value, message: moodMessage }));
-   //dispatch(toogleMood());
    console.log(value);
-   setValue("");
-  //  setIsTogggle(true)
- 
+   setValue(""); 
  };
 
 
@@ -53,14 +47,15 @@ const MoodScreen = (props) => {
       </div>
 
       <ul className="emoji__list">
-        <li onClick={handleHappyMood} value={value} className="emoji">
-          😃
+        <li onClick={handleSadMood} value={value} className="emoji">
+          {" "}
+          😖
         </li>
         <li onClick={handleFunnyMood} value={value} className="emoji">
           😐
         </li>
-        <li onClick={handleSadMood} value={value} className="emoji">
-          😖
+        <li onClick={handleHappyMood} value={value} className="emoji">
+          😃
         </li>
       </ul>
 

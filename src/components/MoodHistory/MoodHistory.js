@@ -1,12 +1,11 @@
 import React, { useState} from "react";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 
 import Mood from "../Mood/Mood";
 import Cat from "../../images/image.png";
 import "./moodHistory.css";
 
-const MoodHistory = (props) => {
+const MoodHistory = () => {
   const [isMood, setIsMood] = useState(false);
 
   const moods = useSelector((state) => state.moods);
