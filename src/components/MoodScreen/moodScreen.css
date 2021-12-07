@@ -47,6 +47,11 @@ margin-top: 35px;
   transform: translateY(2px);
 }
 
+.emoji:focus{  
+ background-color:green;
+
+}
+
 .btn{
 
 height: 41px;
@@ -67,15 +72,15 @@ cursor: pointer;
 }
 
 button:disabled{
-   border: 1px solid #999999;
-  background-color: #cccccc;
-  color: red;
+  background-color: #EFEEEE;
+  border: none;
+ 
 }
-
 
 .screen__text{
   color: rgb(6, 153, 109);
-  margin-top: 15px;
+  margin-top: 45px;
+
 }
 
 

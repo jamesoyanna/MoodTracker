@@ -20,8 +20,6 @@
   }
 }
 
-
-
 .header{
   display: flex;
 }
@@ -54,7 +52,7 @@ line-height: 26px;
   background-size: 46px;
   background-repeat: no-repeat;
   margin: 0 20px 0 20px;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .mood__card__text{

@@ -67,12 +67,12 @@ const MoodScreen = () => {
         </li>
       </ul>
       {moodMessage === "Cat was super excited!" && (
-        <p style={{ color: "#1D9A39" }} className="screen__text">
+        <p style={{ color: "#1D9A39"}} className="screen__text">
           {moodMessage}
         </p>
       )}
       {moodMessage === "Cat wasn't having it" && (
-        <p style={{ color: "red" }}>{moodMessage} </p>
+        <p style={{ color: "red", marginTop: "45px" }}>{moodMessage} </p>
       )}
       {moodMessage === "Cat was indifferent" && (
         <p style={{ color: "#FF9635" }} className="screen__text">
@@ -81,7 +81,11 @@ const MoodScreen = () => {
       )}
 
       <div className="center">
-        <button onClick={HandleSaveMood} className="btn btn-disabled">
+        <button
+          disabled={!value || !moodMessage}
+          onClick={HandleSaveMood}
+          className="btn btn-disabled"
+        >
           Save mood
         </button>
       </div>
