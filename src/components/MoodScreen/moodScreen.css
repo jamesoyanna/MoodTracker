@@ -48,6 +48,7 @@ margin-top: 35px;
 }
 
 .btn{
+
 height: 41px;
 width: 134px;
 left: 253px;
@@ -61,17 +62,15 @@ font-family: Nunito;
 font-style: normal;
 font-weight: bold;
 font-size: 18px;
-line-height: 26px;
 cursor: pointer;
 
 }
 
-/* .btn:disabled,
-.btn[disabled]{
-  border: 1px solid #999999;
+button:disabled{
+   border: 1px solid #999999;
   background-color: #cccccc;
-  color: #666666;
-} */
+  color: red;
+}
 
 
 .screen__text{

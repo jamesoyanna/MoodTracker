@@ -81,7 +81,7 @@ const MoodScreen = () => {
       )}
 
       <div className="center">
-        <button onClick={HandleSaveMood} className="btn">
+        <button onClick={HandleSaveMood} className="btn btn-disabled">
           Save mood
         </button>
       </div>

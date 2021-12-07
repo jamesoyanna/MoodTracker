@@ -44,7 +44,6 @@ color: rgb(172, 167, 167);
 line-height: 26px;
 
 }
-
 .mood__card{
   height: 220px;
   width: 350px;
@@ -55,15 +54,14 @@ line-height: 26px;
   background-size: 46px;
   background-repeat: no-repeat;
   margin: 0 20px 0 20px;
+  opacity: 0.3;
 }
 
 .mood__card__text{
 margin-top: 140px;
 font-size: 14px;
-color:#b3b3b3 ;
-
+color:#000;
 }
-
 
 .mood__image{
   height: 100px;

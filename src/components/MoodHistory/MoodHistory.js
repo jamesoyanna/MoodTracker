@@ -30,11 +30,12 @@ const MoodHistory = () => {
           ))}
         </ul>
       ) : (
-        <div className="mood__card">
-          <p className="mood__card__text">
-            No mood history <br /> to show yet yet
-          </p>
-        </div>
+        
+          <div className="mood__card">
+            <p className="mood__card__text">
+              No mood history <br /> to show yet yet
+            </p>
+          </div>
       )}
     </div>
   );
