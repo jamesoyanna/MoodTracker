@@ -1,22 +1,32 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addMood} from "../../redux/moodSlice";
-
+import { addMood, addToggleMood } from "../../redux/moodSlice";
 import Cat from "../../images/image.png";
+// import syling
 import "./moodScreen.css";
 
 
 const MoodScreen = () => {
  const [value, setValue] = useState(""); 
- const [moodMessage, setMoodMessage] = useState("")
+ const [moodMessage, setMoodMessage] = useState("");
+
+   let isMood = true;
 
  const dispatch = useDispatch();
 
+ // Handling save mood when button is clicked
  const HandleSaveMood = () => {
-   dispatch(addMood({ emoji: value, message: moodMessage }));
-   setValue(""); 
- };
+   dispatch(
+     addMood({ emoji: value, message: moodMessage})
+   );
 
+
+    dispatch(
+      addToggleMood(isMood)
+    );
+
+   setValue("");
+ };
 
   const handleHappyMood = () => {
     setValue("😃");

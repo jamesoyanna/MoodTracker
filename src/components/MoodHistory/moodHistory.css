@@ -12,6 +12,16 @@
   border-radius: 10px;
 
 }
+
+
+@media(min-width:480px){
+  .moodhistory__container {
+    max-width: 100%;
+  }
+}
+
+
+
 .header{
   display: flex;
 }
